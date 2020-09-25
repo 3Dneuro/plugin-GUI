@@ -761,7 +761,8 @@ int RHD2000Thread::getHeadstageChannels (int hsNum) const
 void RHD2000Thread::getEventChannelNames (StringArray& Names) const
 {
     Names.clear();
-    for (int k = 0; k < 8; ++k)
+    // changed 8 to 16 for dual digital in extension
+    for (int k = 0; k < 16; ++k)
     {
         Names.add ("TTL" + String (k + 1));
     }
@@ -957,7 +958,8 @@ String RHD2000Thread::getChannelUnits(int chanIndex) const
 int RHD2000Thread::getNumTTLOutputs(int subproc) const
 {
     if (subproc > 0) return 0;
-    return 8;
+    // 8 to 16 for dual digital in
+    return 16;
 }
 
 float RHD2000Thread::getSampleRate(int subproc) const
