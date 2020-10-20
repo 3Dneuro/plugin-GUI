@@ -1,3 +1,8 @@
+# 16 channel digital in modification
+This repository contains a modified version of OpenEphys that records the digital ins from all 16 channels on the Open Ephys board (that is, channel 1-8 that are broken out to the digital in HDMI & channel 9-16 that are only accessible on the PCB). Channel 9-16 are not displayed in the GUI at recording time.
+For instructions on how to physically adjust the open ephys board, get in touch.
+
+
 # Open Ephys GUI
 
 ![GUI screenshot](https://static1.squarespace.com/static/53039db8e4b0649958e13c7b/t/53bc11f0e4b0e16f33110ad8/1404834318628/?format=1000w)
