@@ -762,16 +762,24 @@ int RHD2000Thread::getHeadstageChannels (int hsNum) const
 }
 
 
-void RHD2000Thread::getEventChannelNames (StringArray& Names) const
+// void RHD2000Thread::getEventChannelNames (StringArray& Names) const
+// {
+//     Names.clear();
+//     // changed 8 to 16 for dual digital in extension
+//     for (int k = 0; k < 16; ++k)
+//     {
+//         Names.add ("TTL" + String (k + 1));
+//     }
+// }
+void RHD2000Thread::getEventChannelNames (StringArray& names) const
 {
-    Names.clear();
-    // changed 8 to 16 for dual digital in extension
-    for (int k = 0; k < 16; ++k)
+    names.clear();
+
+    for (auto name : eventChannelNames)
     {
-        Names.add ("TTL" + String (k + 1));
+        names.add(name);
     }
 }
-
 
 /* go over the old names and tests whether this particular channel name was changed.
 if so, return the old name */
